@@ -90,4 +90,18 @@ class Test extends Resource
     {
         return [];
     }
+
+    /**
+     * Return the location to redirect the user after creation.
+     *
+     * @param \Laravel\Nova\Http\Requests\NovaRequest $request
+     * @param \App\Nova\Resource $resource
+     * @return string
+     */
+    public static function redirectAfterCreate(NovaRequest $request, $resource)
+    {
+        // do custom process here, after transaction
+
+        return parent::redirectAfterCreate($request, $model);
+    }
 }
