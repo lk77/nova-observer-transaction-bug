@@ -102,6 +102,6 @@ class Test extends Resource
     {
         // do custom process here, after transaction
 
-        return parent::redirectAfterCreate($request, $model);
+        return parent::redirectAfterCreate($request,  $resource);
     }
 }
